@@ -1,11 +1,9 @@
 name: Deploy App
 
 on:
-  pull_request:
-    branches:
-      - release*
+  push:
     tags:
-      - release*
+      - '*'
 
 jobs:
   build:
