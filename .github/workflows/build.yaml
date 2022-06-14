@@ -22,3 +22,9 @@ jobs:
           status: ${{ job.status }}
           steps: ${{ toJson(steps) }}
         if: always()
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: app/build/outputs*
+          retention-days: 7
