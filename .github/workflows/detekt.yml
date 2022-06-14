@@ -2,7 +2,7 @@
 name: detekt
 ## 2
 on:
-  push:
+#  push:
   pull_request:
 
 ## 3
