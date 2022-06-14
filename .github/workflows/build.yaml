@@ -1,9 +1,7 @@
 name: Build
 
 on:
-  pull_request:
-    branches:
-      - develop
+  workflow_dispatch
 
 jobs:
   build:
@@ -15,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Build with Gradle
         id: build
-        run: ./gradlew build
+        run: ./gradlew clean assembleDebug
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
